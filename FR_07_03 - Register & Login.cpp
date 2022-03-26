@@ -1,6 +1,3 @@
-/* I know it's unreadable */
-// Sadly... //
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -125,26 +122,26 @@ int main()
                             {
                                 Logins.push_back(LoginInput);
                                 Passwords.push_back(PasswordInput);
-                                cout << "Zarejestrowano" << endl;
+                                cout << "Zarejestrowano\n";
                             }
                             else
                             {
-                                cout << "Login zajety" << endl;
+                                cout << "Login zajety\n";
                             }
                         }
                         else
                         {
-                            cout << "Blad" << endl;
+                            cout << "Blad\n";
                         }
                     }
                     else
                     {
-                        cout << "Blad" << endl;
+                        cout << "Blad\n";
                     }
                 }
                 else
                 {
-                    cout << "Blad" << endl;
+                    cout << "Blad\n";
                 }
 
             }
@@ -187,15 +184,15 @@ int main()
                 it = find(Logins.begin(),Logins.end(),LoginInput);
                 if( it == Logins.end())
                 {
-                    cout << "Konto nie istnieje" << endl;
+                    cout << "Konto nie istnieje\n";
                 }
                 else
                 {
                     if (Passwords[it-Logins.begin()] == PasswordInput)
-                        cout << "Zalogowano" << endl;
+                        cout << "Zalogowano\n";
                     else
                     {
-                        cout << "Zle haslo" << endl;
+                        cout << "Zle haslo\n";
                     }
 
                 }
