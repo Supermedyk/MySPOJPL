@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+
+// TIME 0.14
+
+using namespace std;
+
+__int128 mod = 1010101011;
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    unsigned long long int a;
+    unsigned long long int b;
+    __int128 sum = 0;
+    __int128 secsum = 0;
+    __int128 c;
+    while(cin >> a >> b)
+    {
+        sum = 0;
+        secsum = 0;
+        c = a-1;
+        if (a == 1)
+        {
+            sum = (b*b+b)/2;
+            sum = sum*sum;
+        }
+        else
+        {
+            sum = (b*b+b)/2;
+            sum *= sum;
+            secsum = (c*c+c)/2;
+            secsum*=secsum;
+            sum -= secsum;
+        }
+        sum %= mod;
+        sum %= mod;
+        unsigned long long out = sum;
+
+        cout << out<< "\n";
+    }
+}
